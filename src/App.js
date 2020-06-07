@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import marked from 'marked';
+import Editor from './components/Editor';
+import Preview from './components/Preview';
+import Titlebar from './components/Titlebar';
+
 
 class App extends React.Component{
 	constructor(props){
@@ -22,25 +25,17 @@ class App extends React.Component{
 	
 	 
 
-	render(){
-		
-		marked.setOptions({
-		gfm:true,
-		breaks: true,
-		sanitize:true
-	});
-		
+	render(){		
 		return(
 			<div className="App">
 				<h1>Markdown Previewer</h1>
-				<div className = "textareaWrap">
-					<div>Editor</div>
-					<textarea id='editor' 
-						value = {this.state.input} 
-						onChange = {this.handleChange}>
-					</textarea>
+				<div className = "editorWrap">
+					<Titlebar title = "Editor"/>
+					<Editor input = {this.state.input} change = {this.handleChange}/>
 				</div>
-				<div id='preview' dangerouslySetInnerHTML = {{__html: marked(this.state.input)}}>
+				<div className = "previewWrap">
+					<Titlebar title = "Preview"/>
+					<Preview input = {this.state.input}/>
 				</div>
 			</div>
 		);
