@@ -44,7 +44,7 @@ textarea{
 
 .editorWrapMin{
 	
-	display:hidden;
+	display:none;
 	
 }
 
@@ -57,7 +57,7 @@ textarea{
 
 .previewWrapMin{
 	
-	display:hidden;
+	display:none;
 }
 
 

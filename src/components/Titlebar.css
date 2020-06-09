@@ -13,3 +13,8 @@ div .Titlebar{
 	font-weight:bold;
 	margin:0;
 }
+
+.Titlebar i{
+	float:right;
+	font-weight:bold;
+}
