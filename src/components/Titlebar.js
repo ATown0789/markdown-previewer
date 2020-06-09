@@ -1,4 +1,5 @@
 import React from 'react';
+import './Titlebar.css';
 
 
 
@@ -8,7 +9,9 @@ class Titlebar extends React.Component{
 	render(){
 		return(
 		
-			<h3>{this.props.title}</h3>
+			<div className = "Titlebar">
+				<h3>{this.props.title}</h3>
+			</div>
 		
 		)
 	}

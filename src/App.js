@@ -10,7 +10,8 @@ class App extends React.Component{
 		super(props);	
 
 		this.state = {
-			input: initial
+			input: initial,
+			val : 'initial'
 		}
 		
 		this.handleChange = this.handleChange.bind(this);
@@ -21,9 +22,7 @@ class App extends React.Component{
 		this.setState({
 			input: event.target.value
 		})
-	}
-	
-	 
+	}	 
 
 	render(){		
 		return(
