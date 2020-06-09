@@ -11,6 +11,7 @@ class Titlebar extends React.Component{
 		
 			<div className = "Titlebar">
 				<h3>{this.props.title}</h3>
+				<i onClick = {this.props.click}>X</i>
 			</div>
 		
 		)

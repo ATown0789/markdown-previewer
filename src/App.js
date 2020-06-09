@@ -11,28 +11,35 @@ class App extends React.Component{
 
 		this.state = {
 			input: initial,
-			val : 'initial'
+			isEditorMin: false
 		}
 		
 		this.handleChange = this.handleChange.bind(this);
-		
+		this.editorMin = this.editorMin.bind(this);
+	}
+	
+	editorMin(){
+		this.setState({
+			isEditorMin: !this.state.isEditorMin
+		});
 	}
 	
 	handleChange(event){
 		this.setState({
 			input: event.target.value
-		})
+		});
 	}	 
 
-	render(){		
+	render(){	
+		let classList = this.state.isEditorMin ? ['editorWrapMin','previewWrap'] : ['editorWrap','previewWrap']
 		return(
 			<div className="App">
 				<h1>Markdown Previewer</h1>
-				<div className = "editorWrap">
-					<Titlebar title = "Editor"/>
+				<div className = {classList[0]}>
+					<Titlebar click = {this.editorMin} title = "Editor"/>
 					<Editor input = {this.state.input} change = {this.handleChange}/>
 				</div>
-				<div className = "previewWrap">
+				<div className = {classList[1]} >
 					<Titlebar title = "Preview"/>
 					<Preview input = {this.state.input}/>
 				</div>

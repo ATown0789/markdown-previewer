@@ -3,7 +3,7 @@ div .Titlebar{
 	width: 100%;
 	background-color:white;
 	margin:0;
-	padding:0;
+	padding:1px 10px;
 }
 
 .Titlebar h3{

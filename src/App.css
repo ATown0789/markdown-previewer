@@ -30,23 +30,37 @@ textarea{
 	
 	height:88%;	
 	background:gray;
+	padding:8px 9px;
 	width:100%;
 	resize:none;
 }
 
 .editorWrap{
 
-	margin:10px auto;
+	margin:20px auto;
 	width:90%;
 	height:300px;
+}
+
+.editorWrapMin{
+	
+	display:hidden;
+	
 }
 
 .previewWrap{
 	
 	width:90%;
-	margin:10px auto;
+	margin:30px auto 10px auto;
 	
 }
+
+.previewWrapMin{
+	
+	display:hidden;
+}
+
+
 
 /************Preview display Style **************/
 
@@ -79,5 +93,5 @@ table{
   }
   
   img{
-	  width:100%;
+	  width:80%;
   }
