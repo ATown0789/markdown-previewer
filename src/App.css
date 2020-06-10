@@ -8,6 +8,7 @@ html, #root, body, .App{
 	background:darkblue;
 	padding:20px;
 	height:auto;
+	min-height:800px;
 }
 .App h1{
 	text-align:center;

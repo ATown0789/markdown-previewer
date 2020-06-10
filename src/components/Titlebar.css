@@ -23,6 +23,10 @@ div .Titlebar{
 	color:black;
 }
 
+.fa:hover{
+	cursor:pointer;
+}
+
 .fa-arrows-alt,
   .fa-compress {
 	  
