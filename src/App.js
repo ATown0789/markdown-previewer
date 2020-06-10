@@ -3,6 +3,7 @@ import './App.css';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
 import Titlebar from './components/Titlebar';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 
 class App extends React.Component{
@@ -11,25 +12,24 @@ class App extends React.Component{
 
 		this.state = {
 			input: initial,
-			isEditorMin: false
+			isEditorMax: false,
+			isPreviewMax: false
 		}
 		
 		this.handleChange = this.handleChange.bind(this);
-		this.editorMin = this.editorMin.bind(this);
-		this.previewMin = this.previewMin.bind(this);
+		this.editorMax = this.editorMax.bind(this);
+		this.previewMax = this.previewMax.bind(this);
 	}
 	
-	editorMin(){
+	editorMax(){
 		this.setState({
-			isEditorMin: true,
-			isPreviewMin: false
+			isEditorMax: !this.state.isEditorMax
 		});
 	}
 	
-	previewMin(){
+	previewMax(){
 		this.setState({
-			isEditorMin: false,
-			isPreviewMin: true
+			isPreviewMax: !this.state.isPreviewMax
 		})
 	}
 	
@@ -40,18 +40,18 @@ class App extends React.Component{
 	}	 
 
 	render(){	
-		let classList = this.state.isEditorMin ? ['editorWrapMin','previewWrap'] : 
-													this.state.isPreviewMin ? ['editorWrap','previewWrapMin'] :
-													['editorWrap','previewWrap']
+		let classList = this.state.isEditorMax ? ['editorWrapMax','previewWrap hidden','fa fa-compress'] : 
+													this.state.isPreviewMax ? ['hidden','previewWrapMax','fa fa-compress'] :
+													['editorWrap','previewWrap','fa fa-arrows-alt']
 		return(
 			<div className="App">
 				<h1>Markdown Previewer</h1>
 				<div className = {classList[0]}>
-					<Titlebar click = {this.editorMin} title = "Editor"/>
+					<Titlebar className = {classList[2]} click = {this.editorMax} title = "Editor"/>
 					<Editor input = {this.state.input} change = {this.handleChange}/>
 				</div>
 				<div className = {classList[1]} >
-					<Titlebar click = {this.previewMin} title = "Preview"/>
+					<Titlebar className = {classList[2]} click = {this.previewMax} title = "Preview"/>
 					<Preview input = {this.state.input}/>
 				</div>
 			</div>

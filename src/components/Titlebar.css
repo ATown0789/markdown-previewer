@@ -18,3 +18,15 @@ div .Titlebar{
 	float:right;
 	font-weight:bold;
 }
+
+.fa{
+	color:black;
+}
+
+.fa-arrows-alt,
+  .fa-compress {
+	  
+    position: relative;
+	top:3px;
+	color:black;
+  }

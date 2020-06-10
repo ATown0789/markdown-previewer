@@ -2,6 +2,7 @@ import React from 'react';
 import marked from 'marked';
 
 
+
 class Preview extends React.Component{
 	
 	render(){

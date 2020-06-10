@@ -1,11 +1,13 @@
 html, #root, body, .App{
 	
+	height:100%;
 	margin:0;
 	padding:0;
 }
 .App{
 	background:darkblue;
 	padding:20px;
+	height:auto;
 }
 .App h1{
 	text-align:center;
@@ -25,9 +27,7 @@ html, #root, body, .App{
 	color:black;
 }
 
-
 textarea{
-	
 	height:88%;	
 	background:gray;
 	padding:8px 9px;
@@ -38,13 +38,20 @@ textarea{
 .editorWrap{
 
 	margin:20px auto;
-	width:90%;
+	width:80%;
 	height:300px;
 }
 
-.editorWrapMin{
+textarea:hover{
+	background: lightgray;
+}
+
+
+.editorWrapMax{
 	
-	display:none;
+	margin:20px auto 60px;
+	width:90%;
+	height:500px;
 	
 }
 
@@ -55,8 +62,15 @@ textarea{
 	
 }
 
-.previewWrapMin{
+.previewWrapMax{
 	
+	width:90%;
+	margin:30px auto 30px auto;
+	padding:15px;
+	height:100%;
+}
+
+.hidden{
 	display:none;
 }
 
