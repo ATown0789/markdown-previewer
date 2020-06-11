@@ -54,6 +54,7 @@ class App extends React.Component{
 					<Titlebar className = {classList[2]} click = {this.previewMax} title = "Preview"/>
 					<Preview input = {this.state.input}/>
 				</div>
+				<h4 style = {{textAlign: 'center', color: 'white'}}>Created By: Anthony Collini</h4>
 			</div>
 		);
 	}
