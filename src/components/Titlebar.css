@@ -4,6 +4,7 @@ div .Titlebar{
 	background-color:white;
 	margin:0;
 	padding:1px 10px;
+	z-index:1;
 }
 
 .Titlebar h3{
